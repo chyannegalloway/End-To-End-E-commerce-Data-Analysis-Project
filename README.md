@@ -30,9 +30,7 @@ ORDER BY o.order_id;
 ```
 ### Sales Performance Analysis
 
-Here, I answered basic business questions; 'How much revenue did the business generate?' and 'How does revenue change over time?'.
-
-
+Here, I answered basic business questions; 'How much revenue did the business generate?' and 'How does revenue change over time?'. I also determined the rolling 3-month and quarterly revenue.
 
 ### Order Analysis
 
