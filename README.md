@@ -30,6 +30,10 @@ ORDER BY o.order_id;
 ```
 ### Sales Performance Analysis
 
+Here, I answered basic business questions; 'How much revenue did the business generate?' and 'How does revenue change over time?'.
+
+
+
 ### Order Analysis
 
 ### Product Analysis
