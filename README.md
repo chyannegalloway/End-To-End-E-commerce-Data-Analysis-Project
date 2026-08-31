@@ -16,4 +16,22 @@ Also in the 'Products' table, I noticed that there were a large number of unique
 
 ## Data Analysis in SQL
 
+Before beginning the actual analysis, I first created analytical datasets by joining the tables together, depending on the specific questions or category of questions I wanted to answer. For example, for analysis concerning the sales performance specifically, I created an analytical dataset which joined the 'Orders' and 'OrderItems' tables through the 'order_id. 
+```
+SELECT 
+    o.order_id,
+    o.order_purchase_timestamp,
+    o.order_delivered_timestamp,
+    oi.price,
+    oi.shipping_charges
+FROM Orders o
+LEFT JOIN orderitems oi ON o.order_id = oi.order_id
+ORDER BY o.order_id;
+```
+### Sales Performance Analysis
+
+### Order Analysis
+
+### Product Analysis
+
 ## Dashboard Creation in PowerBI
