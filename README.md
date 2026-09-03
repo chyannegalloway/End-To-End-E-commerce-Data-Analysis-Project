@@ -6,7 +6,7 @@ From a [Brazilian E-Commerce Order & Supply Chain dataset](https://www.kaggle.co
 
 ## The Dataset
 
-This dataset provides information for an e-commerce platform. This dataset is structured with multiple tables; 'Orders', 'OrderItems', 'Customers', 'Payments' and 'Products', each containing specific information about various aspects of the e-commerce operations.
+This dataset provides information for an e-commerce platform. This dataset is structured with multiple tables; 'Orders', 'OrderItems', 'Customers', 'Payments' and 'Products', each containing specific information about various aspects of the e-commerce operations. 
 
 ## Data Cleaning
 
