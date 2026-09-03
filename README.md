@@ -142,6 +142,8 @@ ORDER BY Year
 
 ### Overall Breakdown
 
+<img width="1435" height="802" alt="E-Commerce Dataset Overall Breakdown Page" src="https://github.com/user-attachments/assets/3972c3f9-0086-422d-ab82-3343695e6de6" />
+
 ### Sales Performance
 
 ### Order Analysis
