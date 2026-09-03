@@ -6,6 +6,8 @@ From a [Brazilian E-Commerce Order & Supply Chain dataset](https://www.kaggle.co
 
 ## The Dataset
 
+This dataset provides information for an e-commerce platform. This dataset is structured with multiple tables; 'Orders', 'OrderItems', 'Customers', 'Payments' and 'Products', each containing specific information about various aspects of the e-commerce operations.
+
 ## Data Cleaning
 
 This dataset including multiple tables, so I began the project by cleaning each table individually in PostgreSQL. In each table, I checked for duplicate values, NULL values, impossible values like negative prices or invalid dates. For two of the five tables, I had to perform more in depth analysis. 
