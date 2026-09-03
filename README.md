@@ -4,6 +4,8 @@
 
 From a [Brazilian E-Commerce Order & Supply Chain dataset](https://www.kaggle.com/datasets/bytadit/ecommerce-order-dataset), I performed an End-to-End data analysis project involving SQL and PowerBI. I used SQL to clean the data, JOIN the tables to view them in PowerBI, and perform various aggregations to analyse the data, as I would find it simpler to use SQL queries for more complicated aggregations (like rolling monthly revenue calculations) than DAX. I, then, used PowerBI to create a dashboard showcasing various aspects of my analysis, whilst using simple DAX queries to return various simple KPIs to include in the dashboard. This project improved by confidence and capabilities in SQL, writing complex SQL queries as well as being intentional with the views I connect to PowerBi. 
 
+## The Dataset
+
 ## Data Cleaning
 
 This dataset including multiple tables, so I began the project by cleaning each table individually in PostgreSQL. In each table, I checked for duplicate values, NULL values, impossible values like negative prices or invalid dates. For two of the five tables, I had to perform more in depth analysis. 
@@ -71,7 +73,10 @@ This analysis was done in order to create a graph in PowerBI later on in this pr
 
 ### Order Analysis
 
-Here, I concentrated on 
+For this section, I performed simple aggregations in order to get some key insights. 
+- From a total of 89316 orders, 87428 were delivered, which is 97.8% of all orders.
+- The majority of orders were delivered within a week, or 7 days.
+- 7.71% of orders were delivered later than estimated. 
 
 ### Product Analysis
 
