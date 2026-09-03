@@ -16,6 +16,16 @@ The 'Products' table contained duplicate values. For 89316 total rows there are 
 
 Also in the 'Products' table, I noticed that there were a large number of unique values in the 'product_category_name' column. In order to group these values together, I created another table which I named 'product_categories' that mapped the product names into more general titles, such as 'Fashion', 'Home' etc. I would then join this to the cleaned 'Products' table for the analysis. 
 
+```
+SELECT
+    products_clean.product_id,
+    products_clean.product_category_name,
+    product_categories.broader_category
+FROM products_clean
+LEFT JOIN product_categories ON products_clean.product_category_name = product_categories.product_category_name
+ORDER BY products_clean.product_id;
+```
+
 ## Data Analysis in SQL
 
 Before beginning the actual analysis, I first created analytical datasets by joining the tables together, depending on the specific questions or category of questions I wanted to answer. For example, for analysis concerning the sales performance specifically, I created an analytical dataset which joined the 'Orders' and 'OrderItems' tables through the 'order_id. 
@@ -80,4 +90,58 @@ For this section, I performed simple aggregations in order to get some key insig
 
 ### Product Analysis
 
+This section required a number of joins, as the original table didn't include the price of the purchased product, nor the date it was purchased. The majority of the analysis done here was through using JOINS and CTEs to gather the necessary information. A complex CTE I performed was in determining which product categories grow or decline over time. 
+
+```
+WITH product_orders AS (
+    SELECT 
+        o.order_id,
+        o.order_purchase_timestamp,
+        oi.product_id
+    FROM orders o
+    INNER JOIN orderitems oi ON o.order_id = oi.order_id
+),
+
+product_join_2 AS (
+    SELECT 
+        order_id,
+        order_purchase_timestamp,
+        po.product_id,
+        p.product_category_name
+    FROM product_orders po
+    INNER JOIN products_clean p ON po.product_id = p.product_id
+),
+
+product_category_join AS (
+    SELECT 
+        order_purchase_timestamp,
+        pj.product_id, 
+        pc.broader_category
+    FROM product_join_2 pj
+    INNER JOIN product_categories pc ON pj.product_category_name = pc.product_category_name
+)
+
+SELECT 
+    EXTRACT(YEAR FROM order_purchase_timestamp) AS Year,
+ -- EXTRACT (MONTH FROM order_purchase_timestamp) AS Month,
+    broader_category,
+    COUNT(broader_category) AS purchases
+FROM product_category_join
+GROUP BY
+    EXTRACT(YEAR FROM order_purchase_timestamp),
+ -- EXTRACT (MONTH FROM order_purchase_timestamp),
+    broader_category
+ORDER BY Year
+```
+
 ## Dashboard Creation in PowerBI
+
+### SQL Views
+
+### Overall Breakdown
+
+### Sales Performance
+
+### Order Analysis
+
+
