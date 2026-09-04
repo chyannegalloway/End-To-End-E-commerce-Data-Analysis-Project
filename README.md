@@ -168,4 +168,5 @@ I included:
 
 ### Order Analysis
 
+<img width="1431" height="803" alt="Order Analysis Page" src="https://github.com/user-attachments/assets/d9934e8f-187e-4545-931a-0ac02d9eeaa5" />
 
