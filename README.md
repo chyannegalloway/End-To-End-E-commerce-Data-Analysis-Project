@@ -6,7 +6,9 @@ From a [Brazilian E-Commerce Order & Supply Chain dataset](https://www.kaggle.co
 
 ## The Dataset
 
-This dataset provides information for an e-commerce platform. This dataset is structured with multiple tables; 'Orders', 'OrderItems', 'Customers', 'Payments' and 'Products', each containing specific information about various aspects of the e-commerce operations. A negative of this dataset is that I am unsure of the currency that the price columns are set in. The dataset gathers information from a Brazilian company, however it is unclear whether the currency is set to Brazilian Real, or US dollars. For the sake of this write-up, I will be assuming that the revenue is in US dollars as it is the standard trade currency. All in all, the actual values of the prices and revenue are of little importance, rather it is the way the revenue changes over time, or per category that is of importance here. 
+This dataset provides information for an e-commerce platform. This dataset is structured with multiple tables; 'Orders', 'OrderItems', 'Customers', 'Payments' and 'Products', each containing specific information about various aspects of the e-commerce operations. 
+
+A negative of this dataset is that I am unsure of the currency that the price columns are set in. The dataset gathers information from a Brazilian company, however it is unclear whether the currency is set to Brazilian Real, or US dollars. For the sake of this write-up, I will be assuming that the revenue is in US dollars as it is the standard trade currency. All in all, the actual values of the prices and revenue are of little importance, rather it is the way the revenue changes over time, or per category that is of importance here. 
 
 ## Data Cleaning
 
@@ -155,7 +157,8 @@ Average Order Value = DIVIDE([Total Revenue], [Total Orders])
 I included:
 - A line and clustered column chart which showed how the total revenue and total number of orders changed over monthly intervals. From October 2016 to November 2017, the revenue increased overall. For the remainder of the period, the revenue remained consistent. The total number of orders showed a similar pattern. For the most part, when the total number of orders increased, the revenue also increased.
 - A clustered horizontal bar chart showcasing which cities generated the most revenue. As expected, the most populated cities generated the most revenue.
-- Two donut charts which showed breakdowns of the most purchased category and the most used payment type. The most purchased category was 'Hobbies', contributing to 78.3% of total orders. The most used payment type was credit card, making up 73.9% of total orders. 
+- Two donut charts which showed breakdowns of the most purchased category and the most used payment type. The most purchased category was 'Hobbies', contributing to 78.3% of total orders. The most used payment type was credit card, making up 73.9% of total orders.
+- A slicer of the timeline of orders purchased. This was added to show how the various plots change depending of the time period. 
 
 <img width="1435" height="802" alt="E-Commerce Dataset Overall Breakdown Page" src="https://github.com/user-attachments/assets/3972c3f9-0086-422d-ab82-3343695e6de6" />
 
