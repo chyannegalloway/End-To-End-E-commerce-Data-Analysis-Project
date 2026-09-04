@@ -164,6 +164,8 @@ I included:
 
 ### Sales Performance
 
+<img width="1432" height="802" alt="Sales Performance Page" src="https://github.com/user-attachments/assets/6d730112-6d2d-42b2-9415-cf9ae2c421fd" />
+
 ### Order Analysis
 
 
