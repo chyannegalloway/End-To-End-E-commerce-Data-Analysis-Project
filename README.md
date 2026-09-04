@@ -201,7 +201,22 @@ A downside to this page is that I didn't include a slicer. This is because that 
 
 ### Order Analysis
 
-This page 
+Through this page I sought out to examine the trends in the orders, number of orders, deliveries and the factors which effect them. Like the overall breakdown page, I started with some basic KPIs, again using simple DAX calculations:
+- There were 87000 orders delivered.
+- The average delivery time was 12 days.
+```
+Number of Delivered Orders = CALCULATE(DISTINCTCOUNT('public orders'[order_id]), 'public orders'[order_status] = "delivered")
+Average Delivery Time = AVERAGEX('public orders', DATEDIFF('public orders'[order_purchase_timestamp], 'public orders'[order_delivered_timestamp], DAY))
+```
+I also included a pie chart showing the proportion of deliveries that were on=time compared to late deliveries. 7.54% of deliveries were delivered after the estimated date. 
+
+The first of the main charts I included here was to show the number of orders by month. This was included to determine if there was a specific month that showed the most sales, and if customers were more inclined to buy from the company in one specific month. I had previously assumed that December would be a month that had a higher amount of orders compared to previous months, due to Christmas sales. However, as was shown on the chart, the number of orders didn't differ greatly between months. August had the highest number of orders, at 9583 sales, with May coming in second with 9570 sales. September had the lowest number of sales at 3941 sales. 
+
+I included a graph that showed, of the deliveries that were late, by how many days were they delayed. Here, the majority of late orders were delivered 7 days late. The distribution shown was skewed towards the lower end of delay time.
+
+The final graph included here was to show the number of orders by day of the month. This was used to determine if there was a trend in the time of the month when orders were placed. The highest number of the orders were placed on the 24th day of the month, with 3480 orders placed. Overall, the number of orders placed remained consistent across the days. 
+
+Finally, I included a button slicer for the category type, to show if there were any significant differences based on the specific category bought. 
 
 <img width="1431" height="803" alt="Order Analysis Page" src="https://github.com/user-attachments/assets/d9934e8f-187e-4545-931a-0ac02d9eeaa5" />
 
