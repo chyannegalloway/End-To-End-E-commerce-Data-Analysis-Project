@@ -193,7 +193,7 @@ ORDER BY month;
 ```
 This projected the target revenue as a 5% increase to the monthly revenue. Overall, the monthly revenue closely resembled the target, except at the large increase at November 2017. Here, since the total orders were so greatly increased, the target predicted the December sales to follow closely. However, since November is seemingly an outlier, the December sales resembled closer to that of the other months, and the target greatly differed from this. 
 
-The final plot I included here was a line chart depicting the rolling 3-month revenue compared to the monthly revenue. 
+The final plot I included here was a line chart depicting the rolling 3-month revenue compared to the monthly revenue. I included this graph as it reduced short-term fluctuations, making the overall trend easier to see. The rolling revenue is shown to be steadily increasing, meaning that the business has sustained growth. November 2017 was an unusual month in terms of revenue, but the remainder of the months again showed sustained growth. 
 
 A downside to this page is that I didn't include a slicer. This is because that the years used between the three time-series graphs were pulled from different tables that weren't connected by relationships in the model view. 
 
